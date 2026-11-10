@@ -5,8 +5,12 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -291,6 +295,15 @@ fun AuthenticatedMeraInstaApp(
                                 verticalAlignment = Alignment.CenterVertically,
                                 modifier = Modifier.clickable { viewModel.setOnlineStatus(!isOnline) }
                             ) {
+                                Image(
+                                    painter = painterResource(id = R.drawable.img_app_logo),
+                                    contentDescription = "Mera Insta Logo",
+                                    contentScale = ContentScale.Crop,
+                                    modifier = Modifier
+                                        .size(30.dp)
+                                        .clip(RoundedCornerShape(8.dp))
+                                )
+                                Spacer(Modifier.width(8.dp))
                                 Text(
                                     text = "Mera Insta",
                                     fontWeight = FontWeight.ExtraBold,
