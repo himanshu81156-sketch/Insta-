@@ -1,0 +1,6 @@
+{
+  "name": "Mera Insta",
+  "description": "Online social media app with Posts, 24h Stories, Reels, Follow system, Search, Profile, and Real-time Chat.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
